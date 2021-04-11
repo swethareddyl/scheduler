@@ -10,13 +10,17 @@ function renderDescription() {
       textarea.text(record);
     }
 
-    var hourCheck = moment().format("hh:00 a");
-    if (hourText == hourCheck){
+    //Check for the current time, past or future and change the color of the div
+    var hourCheck = moment().format("HH:00 a");
+    let beginTime = moment(hourText, 'h:mma');
+    let endTime = moment(hourCheck, 'h:mma');
+
+    if (beginTime.isSame(endTime)){
       textarea.css("background","#ff6961");
-    } else if (hourText < hourCheck){
+    } else if (beginTime.isBefore(endTime)){
       textarea.css("background","#d3d3d3");
     }
-    else if (hourText > hourCheck){
+    else if (beginTime.isAfter(endTime)){
       textarea.css("background","#77dd77");
     } 
   });
