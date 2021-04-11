@@ -31,7 +31,7 @@ The following image shows the web application's appearance and funcationality:
 ![Scheduler](./assets/scheduler.PNG)
 
 ## URL of the website 
-https://swethareddyl.github.io/QuizApp/  
+https://swethareddyl.github.io/scheduler/  
 
 ## Github link 
-https://github.com/swethareddyl/QuizApp.git
+https://github.com/swethareddyl/scheduler.git
